@@ -1,0 +1,52 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.header {
+    padding: 0;
+    margin: 0;
+    /* background-color: darkslateblue; */
+    margin-top: 0;
+    width: 100%;
+    height: 4vw;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 37px ;
+    font-style: italic;
+}
+.navbar {
+    padding: 0;
+    margin: 0;
+    position: fixed !important;
+    background-color: darkslateblue;
+    width: 100%;
+}
+
+.list {
+    display: inline;
+    /* float: right; */
+    margin-left: 15vw;
+    padding: 1vw;
+    margin: 0.1vw;
+}
+.lists {
+    /* margin-left: 15vw; */
+    padding-right: 0px;
+    float: right;
+    margin: 0;
+}
+/* ul {
+    float: right;
+} */
+
+body{
+        background: #1e1e1e;
+    }
+    
+    a:hover{
+        color: red;
+        text-decoration: none;
+        transition-delay: 200ms;
+    }

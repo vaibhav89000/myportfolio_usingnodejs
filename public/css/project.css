@@ -1,0 +1,19 @@
+.main{
+    margin-top: 4vw;
+}
+.card{
+    border-radius: 3vw;
+    margin-right: 0vw;
+    margin-left: 1vw !important;
+
+}
+.card-title{
+    color: red;
+}
+.card-text{
+    color: purple;
+    
+}
+h5{
+    color: green;
+}

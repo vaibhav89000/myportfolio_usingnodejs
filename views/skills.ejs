@@ -1,0 +1,60 @@
+<%- include('includes/head.ejs') %>
+<style>
+    table{
+        margin: 8vw ;
+        font-size: 2vw;
+    }
+   td{
+       color: royalblue;
+   }
+   .heading:nth-child(even){
+       color: royalblue !important;
+   }
+   label{
+       color: black;
+       font-size: 4vw;
+       background-color: #dddddd;
+       width: 100%;
+   }
+   tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <label for="skills">Skills</label>
+    <div class="container">
+        <div class="row">
+
+            <table>
+                
+                <tr>
+                    <td class="heading">Frontend Technologies</td>
+                    <td>HTML5 , CSS , BOOTSTRAP , EJS</td>
+                </tr>
+                <tr>
+                    <td class="heading">Backend Technologies</td>
+                    <td>PHP , Node js</td>
+                </tr>
+                <tr>
+                    <td class="heading">Database</td>
+                    <td>Mysql , Mongo db</td>
+                </tr>
+                <tr>
+                    <td class="heading">Programming Languages</td>
+                    <td>Python,c,c++</td>
+                </tr>
+                <tr>
+                    <td class="heading">Other Skills</td>
+                    <td>Pandas , numpy , matplotlib , seaborn , opencv</td>
+                </tr>
+            </table>
+            <!-- <div class="col-sm-6">
+
+
+            </div> -->
+        </div>
+
+    </div>
+    <%- include('includes/end.ejs') %>

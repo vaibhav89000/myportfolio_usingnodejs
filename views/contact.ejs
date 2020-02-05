@@ -1,0 +1,74 @@
+<%- include('includes/head.ejs') %>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #map{
+    height: 500px;
+    width: 800px;
+  }
+  .container {
+    margin-top: 2vw;
+  }
+</style>
+
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <div class="container">
+      <div class="row">
+        <div id="map" class="col-sm-6"></div>
+        <div class="col-sm-6">
+          <form  method="POST" style="margin-left: 10vw;" action="/home/contact/submitted">
+              <div class="form-group">
+                  <label for="firstname" style="color: blanchedalmond;">Firstname</label>
+                  <input type="text" name="firstname" class="form-control"   placeholder="Enter firstname" style="width: 20vw; color: black;">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+                <div class="form-group">
+                  <label for="lastname" style="color: blanchedalmond;">lastname</label>
+                  <input type="text" name="lastname" class="form-control" id="lastname"  placeholder="Enter lasttname" style="width: 20vw; color: black;">
+                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1" style="color: blanchedalmond;">Email address</label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" style="width: 20vw; color: black;">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="number" style="color: blanchedalmond;">Contact details</label>
+                <input type="number" name="number" class="form-control" id="number" placeholder="Contact Number" style="width: 20vw; color: black;">
+              </div>
+              <!-- <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div> -->
+              <textarea rows="4" cols="50" name="comment"  class="form-control" style="width: 20vw; margin-top: 1vw; color: black;" placeholder="your comment"></textarea>
+              <button type="submit" class="btn btn-primary" style="margin-top: 1vw;">Submit</button>
+            </form>
+      </div>
+  
+
+      </div>
+    </div>
+    
+    <!-- <div id="map"></div> -->
+
+    <script>
+      function initMap() {
+        var location = {lat: 28.669155, lng: 77.453758};
+        var map =new google.maps.Map(document.getElementById("map"),{
+          zoom: 10,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy7_lgp0WMkt3W_vptmu2K_557McDVv38&callback=initMap"
+      type="text/javascript"></script>
+    <%- include('includes/end.ejs') %>
